@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+
+}
+
+html {
+    background: var(--white);
+    font-size: 62.5%;
+    font-family: 'Jost', sans-serif;
+    color: var(--black);
+    transition: all 2s;
+    scroll-behavior: smooth;
+}
+
+
+
+svg path {
+    stroke: var(--black);
+    transition: stroke .5s;
+}
+
+/* path {
+} */
+
+/* Seção de bem-vindo */
+#wellcome {
+    height: 100vh;
+    max-height: 1080px;
+    width: 100%;
+    font-size: 1.6rem;
+    background-image: url(../assets/background-dark.svg);
+    background-position-y: 10rem;
+    background-size: auto;
+    justify-content: center;
+    animation: background 30s linear infinite;
+    animation-fill-mode: forwards;
+    transition: background-image 2s;
+}
+
+/* Animação do background */
+@keyframes background {
+    from {
+        background-position-y: 0px;
+        background-position-x: 0px;
+    }
+
+    to {
+        background-position-y: 700px;
+        background-position-x: 700px;
+    }
+}
+
+#wellcome header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 5rem;
+    box-sizing: border-box;
+    position: fixed;
+    transition: background 2s;
+    background: var(--white);
+}
+
+#wellcome header .header-content {
+
+    min-width: min(128rem, 90%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+    margin: 0 5rem;
+}
+
+#wellcome header .header-content span {
+    color: var(--black);
+    font-weight: bold;
+}
+
+#wellcome header .header-content .menu .links {
+    display: flex;
+    gap: 2rem;
+}
+
+#wellcome header .header-content .menu .links a {
+    color: var(--black);
+    font-weight: 600;
+    transition: color .5s;
+}
+
+#wellcome header .header-content .menu .links a:hover {
+    color: var(--purple);
+}
+
+#wellcome header #btn-menu {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: .6s;
+
+}
+
+#wellcome header #btn-menu>span {
+    align-self: center;
+    border-top: .2rem solid var(--black);
+    transition: .6s;
+
+}
+
+#wellcome header #btn-menu>span::after,
+#wellcome header #btn-menu>span::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: .2rem;
+    background: var(--black);
+    margin: .5rem 0;
+    transition: .6s;
+
+}
+
+#wellcome header #theme {
+    background: transparent;
+}
+
+#wellcome main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    max-width: min(108rem, 80%);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    height: 85%;
+}
+
+#wellcome main .image-user {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+#wellcome main .info h1 {
+    font-size: 4.8rem;
+    margin-bottom: 1rem;
+}
+
+#wellcome main .info p {
+    color: var(--gray);
+}
+
+#wellcome main .info h1 span {
+    color: var(--purple);
+}
+
+#wellcome main .info h1+p {
+    margin-bottom: 1rem;
+}
+
+#wellcome main img {
+    height: auto;
+    width: min(40.1rem, 80%);
+    object-fit: contain;
+}
+
+
+#wellcome footer {
+    width: 100%;
+}
+
+#wellcome footer .contact {
+    width: min(128rem, 90%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+#wellcome footer .contact a:hover svg path,
+svg:hover path {
+    stroke: var(--purple);
+}
+
+
+#projects,
+#skills,
+#about {
+    width: min(128rem, 90%);
+    margin: 0 auto 22.6rem auto;
+    /* margin-bottom: 22.6rem; */
+
+}
+
+h2 {
+    padding-top: 5rem;
+    margin-bottom: 8.3rem;
+    font-size: 4.8rem;
+    text-align: center;
+}
+
+/* Projetos */
+
+#projects .container-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: space-between; */
+    justify-items: center;
+    row-gap: 5rem;
+}
+
+#projects .container-projects .project {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#projects .container-projects .project span {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+}
+
+#projects .container-projects .project .link-to-aplication {
+    color: var(--gray);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#projects .container-projects .project .link-to-aplication a {
+    color: var(--purple);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+#projects .container-projects .project .project-description {
+    font-size: 1.6rem;
+    color: var(--gray);
+    padding-right: 3.5rem;
+}
+
+/* Skills */
+
+
+
+
+#skills div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#skills div>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills div img {
+    margin: 0 1rem;
+    height: auto;
+    width: min(80%, 8.5rem);
+    /* max-width: 8.5rem; */
+}
+
+#skills div div span {
+    font-size: 1.8rem;
+    color: var(--gray);
+}
+
+/* about */
+
+#about>div {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#about div:nth-child(2) img + p {
+    font-size: 1.8rem;
+    width: 40%;
+    color: var(--gray);
+
+}
+
+#about img {
+    height: auto;
+    width: min(30.1rem, 100%);
+
+}
+
+#about .formation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+#about .formation>.education {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    gap: 3rem;
+}
+
+#about .formation .education-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about .formation .education-info p {
+    color: var(--black);
+    font-size: 1.8rem;
+
+}
+
+#about .formation .education-info span {
+    color: var(--gray);
+    font-size: 1.6rem;
+}
+
+#about h3 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+@media (max-width: 934px) {
+
+    /* responsividade */
+    #projects,
+    #skills,
+    #about {
+        width: min(128rem, 90%);
+        margin: 0 auto 8.6rem auto;
+        /* margin-bottom: 22.6rem; */
+
+    }
+
+    #wellcome main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        height: 95%;
+        margin: 0 auto;
+    }
+
+    #wellcome main .info {
+        margin-bottom: -10rem;
+        width: 90%;
+    }
+
+    #wellcome main .info h1 {
+        font-size: 3.8rem;
+        margin-bottom: 1rem;
+    }
+
+
+    #wellcome main img {
+        margin: auto;
+        width: min(30.1rem, 100%);
+    }
+
+    #wellcome footer .contact {
+        justify-content: center;
+    }
+
+    #projects .container-projects {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    #skills div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #skills div div:last-child {
+        grid-column: 1 / 3;
+    }
+
+    #about div:nth-child(2),
+    #about .formation>.education {
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+
+    /* menu */
+    #wellcome header .header-content #buttons-menu {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #wellcome header .header-content #buttons-menu #btn-menu {
+        padding: .5rem;
+        display: flex;
+    }
+
+    #wellcome header .header-content .menu {
+        background-color: var(--white);
+        visibility: hidden;
+        overflow-y: hidden;
+        height: 0px;
+        transition: .6s;
+        z-index: 10000;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #wellcome header .header-content .menu.active {
+        height: calc(100vh - 5rem);
+        transition: .6s;
+        visibility: visible;
+
+    }
+
+    #wellcome header .header-content .menu .links {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin: 0 2.6rem;
+    }
+
+    #wellcome header .header-content .menu .links li {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #wellcome header .header-content .menu.active .links li a {
+        display: block;
+        width: 100%;
+        padding: .5rem;
+    }
+
+
+
+    #wellcome #buttons-menu.active #btn-menu span::after {
+        transform: rotate(-35deg);
+        position: relative;
+    }
+
+    #wellcome #buttons-menu.active #btn-menu span {
+        transform: rotate(35deg);
+        position: relative;
+    }
+
+
+    #wellcome main {
+        grid-template-columns: 1fr;
+    }
+
+    #about div:nth-child(2) img + p {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,13 @@
+.light {
+    --purple: #6109D1;
+    --white: #FFFFFF;
+    --black: #202020;
+    --gray: #686464;
+}
+
+.dark {
+    --purple: #6109D1;
+    --white: #202020;
+    --black: #FFFFFF;
+    --gray: #B4B4B5;
+}
