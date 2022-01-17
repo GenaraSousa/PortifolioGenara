@@ -278,9 +278,8 @@ h2 {
 
 #skills div img {
     margin: 0 1rem;
-    height: auto;
-    width: min(80%, 8.5rem);
-    /* max-width: 8.5rem; */
+    height: 8.5rem;
+    width: 8.5rem;
 }
 
 #skills div div span {
